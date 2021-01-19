@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A starter AWS Lambda function.
+Resources:
+  helloworld:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.handler
+      Runtime: nodejs12.x
+      CodeUri: s3://vik-code-sam/1aeaebea08e3c17d010a43ca45f86919
+      Description: A starter AWS Lambda function.
+      MemorySize: 128
+      Timeout: 3
