@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}/src/app.js",
+            "name": "Attach to SAM CLI",
+            "port": 5858,
+            "remoteRoot": "/var/task",
+            "request": "attach",
+            "type": "node",
+            "protocol": "legacy"
+        }
+    ]
+}
