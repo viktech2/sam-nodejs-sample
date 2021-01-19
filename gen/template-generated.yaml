@@ -1,13 +1,19 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: AWS::Serverless-2016-10-31
 Description: A starter AWS Lambda function.
 Resources:
   helloworld:
-    Type: AWS::Serverless::Function
     Properties:
-      Handler: app.handler
-      Runtime: nodejs12.x
-      CodeUri: s3://vik-code-sam/1aeaebea08e3c17d010a43ca45f86919
+      CodeUri: s3://vik-code-sam/4cc313c016b424c23126990ba6a465e9
       Description: A starter AWS Lambda function.
+      Events:
+        helloworldSAMAPI:
+          Properties:
+            Method: GET
+            Path: /hello
+          Type: Api
+      Handler: app.handler
       MemorySize: 128
+      Runtime: nodejs12.x
       Timeout: 3
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
